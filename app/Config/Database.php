@@ -30,12 +30,13 @@ class Database extends Config
 	 *
 	 * @var array
 	 */
+	// mysql://b70671433b820a:60736830@us-cdbr-east-04.cleardb.com/heroku_0ebdc6b3d31e5d7?reconnect=true
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'localhost',
-		'username' => 'root',
-		'password' => '',
-		'database' => 'flashwork',
+		'hostname' => 'us-cdbr-east-04.cleardb.com',
+		'username' => 'b70671433b820a',
+		'password' => '60736830',
+		'database' => 'heroku_0ebdc6b3d31e5d7',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
