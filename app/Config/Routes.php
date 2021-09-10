@@ -94,7 +94,7 @@ $routes->put('/editimgfree/(:any)', 'UserController\Studentcontroller::addimgFre
 $routes->get('/getEmp/(:any)', 'UserController\Employercontroller::getEmpData/$1');
 $routes->put('/getEmp/(:any)', 'UserController\Employercontroller::editProfileEmp/$1');
 $routes->put('/editimgemp/(:any)', 'UserController\Employercontroller::addimgEmp/$1');
-$routes->get('/getHistory/(:any)', 'UserController\Studentcontroller::getHistoryFree/$1');
+
 $routes->post('/report', 'UserController/ReportControll::addReport');
 $routes->put('/changePassEmp/(:any)', 'UserController\Employercontroller::changePassEmp/$1');
 
@@ -118,19 +118,21 @@ $routes->post('/employment', 'WorkController/Employment::addEmployment');
 $routes->get('/employmentFlReq/(:any)', 'WorkController\Employment::selectEmploymentForFl/$1');
 $routes->get('/employmentFlProgress/(:any)', 'WorkController\Employment::selEmploymentForFltoProgress/$1');
 $routes->get('/employmentFlSuc/(:any)', 'WorkController\Employment::selEmploymentForFltoSuccess/$1');
+$routes->get('/getHistory/(:any)', 'UserController\Studentcontroller::getHistoryFree/$1');
 
 //---------------------------------Employment Employer------------------------------------------------------
 $routes->get('/employmentEpyReq/(:any)', 'WorkController\Employment::selectEmploymentForEpy/$1');
 $routes->get('/employmentEpyProgress/(:any)', 'WorkController\Employment::selectEmploymentForEpytoProgress/$1');
 $routes->get('/employmentEpySuc/(:any)', 'WorkController\Employment::selEmploymentForEpytoSuccess/$1');
 $routes->get('/employmentEpySucAndReview/(:any)', 'WorkController\Employment::selEmploymentForEpytoSuccessAndReview/$1');
-$routes->put('/acceptFromFl/(:any)', 'WorkController\Employment::acceptFromFl/$1');
+$routes->put('/employmentEpyReq/(:any)', 'WorkController\Employment::acceptFromFl/$1');
 $routes->put('/addreview/(:any)', 'WorkController\Employment::insertreview/$1');
 
 $routes->delete('/deleteemploymentReq/(:any)', 'WorkController\Employment::deleteFromEpy/$1');
-$routes->put('/successFromEpy/(:any)', 'WorkController\Employment::successFromEpy/$1');
+$routes->put('/employmentEpySuc/(:any)', 'WorkController\Employment::successFromEpy/$1');
 $routes->get('/getHistoryEmp/(:any)', 'UserController\Employercontroller::getHistoryEmp/$1');
 $routes->delete('/deleteemploymentfree/(:any)', 'WorkController\Employment::deleteemploymentFree/$1');
+
 
 
 if (file_exists(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
