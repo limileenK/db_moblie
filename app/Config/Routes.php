@@ -121,7 +121,7 @@ $routes->get('/employmentFlSuc/(:any)', 'WorkController\Employment::selEmploymen
 $routes->get('/getHistory/(:any)', 'UserController\Studentcontroller::getHistoryFree/$1');
 
 //---------------------------------Employment Employer------------------------------------------------------
-$routes->get('/employmentEpyReq/(:any)', 'WorkController\Employment::selectEmploymentForEpy/$1');
+$routes->get('/employmentEpyReqGet/(:any)', 'WorkController\Employment::selectEmploymentForEpy/$1');
 $routes->get('/employmentEpyProgress/(:any)', 'WorkController\Employment::selectEmploymentForEpytoProgress/$1');
 $routes->get('/employmentEpySuc/(:any)', 'WorkController\Employment::selEmploymentForEpytoSuccess/$1');
 $routes->get('/employmentEpySucAndReview/(:any)', 'WorkController\Employment::selEmploymentForEpytoSuccessAndReview/$1');
